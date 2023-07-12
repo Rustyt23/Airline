@@ -131,8 +131,8 @@ case class Airline(name: String, isGenerated : Boolean = false, var id : Int = 0
     DelegateInfo(availableCount, busyDelegates)
   }
 
-  val BASE_DELEGATE_COUNT = 5
-  val DELEGATE_PER_LEVEL = 3
+  val BASE_DELEGATE_COUNT = 50
+  val DELEGATE_PER_LEVEL = 30
   lazy val delegateCount = BASE_DELEGATE_COUNT + airlineGrade.value * DELEGATE_PER_LEVEL +
     AirlineSource.loadAirlineBasesByAirline(id).flatMap(_.specializations).filter(_.isInstanceOf[DelegateSpecialization]).map(_.asInstanceOf[DelegateSpecialization].delegateBoost).sum
 }

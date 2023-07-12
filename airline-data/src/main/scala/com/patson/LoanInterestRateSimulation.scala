@@ -69,7 +69,7 @@ object LoanInterestRateSimulation {
     }
   }
 
-  val DEFAULT_ANNUAL_RATE : Double = 0.12 //12%
+  val DEFAULT_ANNUAL_RATE : Double = 0.03 //3%
   val MAX_DELTA : BigDecimal = 0.01
   val RATE_STEP : BigDecimal= 0.001 // 0.1 % is a step
   val MIN_RATE : BigDecimal= 0.01 //min rate is 1%
